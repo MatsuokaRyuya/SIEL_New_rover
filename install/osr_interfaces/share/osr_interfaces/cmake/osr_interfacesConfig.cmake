@@ -1,0 +1,1 @@
+/home/ryuya/rover_workspace/build/osr_interfaces/ament_cmake_core/osr_interfacesConfig.cmake

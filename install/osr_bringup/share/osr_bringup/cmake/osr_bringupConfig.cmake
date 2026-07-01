@@ -1,0 +1,1 @@
+/home/ryuya/rover_workspace/build/osr_bringup/ament_cmake_core/osr_bringupConfig.cmake

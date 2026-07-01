@@ -1,0 +1,1 @@
+/home/ryuya/rover_workspace/build/osr_interfaces/rosidl_generator_rs/osr_interfaces/rust/src/msg.rs

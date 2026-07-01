@@ -1,0 +1,1 @@
+/home/ryuya/rover_workspace/build/osr_interfaces/rosidl_generator_c/osr_interfaces/msg/detail/status__type_support.h

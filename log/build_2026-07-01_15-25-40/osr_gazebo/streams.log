@@ -1,0 +1,100 @@
+[0.010s] Invoking command in '/home/ryuya/rover_workspace/build/osr_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ryuya/rover_workspace/src/osr_gazebo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ryuya/rover_workspace/install/osr_gazebo
+[0.129s] -- The C compiler identification is GNU 13.3.0
+[0.418s] -- The CXX compiler identification is GNU 13.3.0
+[0.544s] -- Detecting C compiler ABI info
+[0.651s] -- Detecting C compiler ABI info - done
+[0.656s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.656s] -- Detecting C compile features
+[0.656s] -- Detecting C compile features - done
+[0.694s] -- Detecting CXX compiler ABI info
+[0.779s] -- Detecting CXX compiler ABI info - done
+[0.785s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.785s] -- Detecting CXX compile features
+[0.785s] -- Detecting CXX compile features - done
+[0.794s] -- Found geometry_msgs: 5.3.8 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[0.878s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.921s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.026s] -- Found rosidl_generator_c: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.035s] -- Found rosidl_generator_cpp: 4.6.9 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.047s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.058s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.089s] -- Found rclcpp: 28.1.21 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.133s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.135s] -- Found rmw_fastrtps_cpp: 8.4.4 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.197s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.253s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.289s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.365s] -- Found rclcpp_action: 28.1.21 (/opt/ros/jazzy/share/rclcpp_action/cmake)
+[1.391s] -- Found sensor_msgs: 5.3.8 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.409s] -- Found nav_msgs: 5.3.8 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[1.426s] -- Found tf2_geometry_msgs: 0.36.21 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)
+[1.444s] -- Found eigen3_cmake_module: 0.3.1 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[1.445s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.445s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.502s] -- Found trajectory_msgs: 5.3.8 (/opt/ros/jazzy/share/trajectory_msgs/cmake)
+[1.517s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.579s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.579s] -- Configured cppcheck include dirs: 
+[1.579s] -- Configured cppcheck exclude dirs and/or files: 
+[1.579s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.579s] -- Configured 'flake8' exclude dirs and/or files: 
+[1.580s] -- Added test 'lint_cmake' to check CMake code style
+[1.580s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.581s] -- Added test 'uncrustify' to check C / C++ code style
+[1.582s] -- Configured uncrustify additional arguments: 
+[1.582s] -- Added test 'xmllint' to check XML markup files
+[1.583s] -- Configuring done (1.6s)
+[1.591s] -- Generating done (0.0s)
+[1.593s] -- Build files have been written to: /home/ryuya/rover_workspace/build/osr_gazebo
+[1.600s] Invoked command in '/home/ryuya/rover_workspace/build/osr_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ryuya/rover_workspace/src/osr_gazebo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ryuya/rover_workspace/install/osr_gazebo
+[1.600s] Invoking command in '/home/ryuya/rover_workspace/build/osr_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ryuya/rover_workspace/build/osr_gazebo -- -j24 -l24
+[1.630s] [ 50%] [32mBuilding CXX object CMakeFiles/osr_controller.dir/src/osr_controller.cpp.o[0m
+[9.900s] [100%] [32m[1mLinking CXX executable osr_controller[0m
+[10.235s] [100%] Built target osr_controller
+[10.241s] Invoked command in '/home/ryuya/rover_workspace/build/osr_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ryuya/rover_workspace/build/osr_gazebo -- -j24 -l24
+[10.242s] Invoking command in '/home/ryuya/rover_workspace/build/osr_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ryuya/rover_workspace/build/osr_gazebo
+[10.246s] -- Install configuration: ""
+[10.246s] -- Execute custom install script
+[10.247s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//launch/empty_world.launch.py
+[10.252s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//launch/rover_joy_teleop.launch.py
+[10.256s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//launch/rviz.launch.py
+[10.262s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//config/controller_velocity.yaml
+[10.266s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//urdf/gazebo.urdf.xacro
+[10.272s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//urdf/insert_transmission.urdf.xacro
+[10.276s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//urdf/osr.urdf.xacro
+[10.281s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//meshes/arm.stl
+[10.286s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//meshes/body.stl
+[10.291s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//meshes/body_axis.stl
+[10.296s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//meshes/box_link.stl
+[10.301s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//meshes/rocker_bogie_final.stl
+[10.305s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//meshes/rocker_bogie_link_front.stl
+[10.309s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//meshes/rocker_bogie_link_middle.stl
+[10.314s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//meshes/rocker_bogie_link_rear.stl
+[10.319s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//meshes/rockerbogie_front_1.stl
+[10.324s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//meshes/rockerbogie_middle_1.stl
+[10.329s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//meshes/turn_L.stl
+[10.335s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//meshes/turn_R.stl
+[10.340s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//meshes/turn_left_test.stl
+[10.345s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//meshes/turn_right_test.stl
+[10.349s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//meshes/wheel.stl
+[10.354s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//meshes/wheel_link_left_2.stl
+[10.359s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//meshes/wheel_link_right_2.stl
+[10.364s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//meshes/wheel_middle_left.stl
+[10.369s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo//rviz/rviz_settings.rviz
+[10.374s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/lib/osr_gazebo/osr_controller
+[10.379s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/ament_index/resource_index/package_run_dependencies/osr_gazebo
+[10.384s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/ament_index/resource_index/parent_prefix_path/osr_gazebo
+[10.389s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/environment/ament_prefix_path.sh
+[10.393s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/environment/ament_prefix_path.dsv
+[10.398s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/environment/path.sh
+[10.403s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/environment/path.dsv
+[10.408s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/local_setup.bash
+[10.413s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/local_setup.sh
+[10.418s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/local_setup.zsh
+[10.422s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/local_setup.dsv
+[10.428s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/package.dsv
+[10.433s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/ament_index/resource_index/packages/osr_gazebo
+[10.438s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/cmake/osr_gazeboConfig.cmake
+[10.443s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/cmake/osr_gazeboConfig-version.cmake
+[10.447s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/package.xml
+[10.453s] Invoked command in '/home/ryuya/rover_workspace/build/osr_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ryuya/rover_workspace/build/osr_gazebo

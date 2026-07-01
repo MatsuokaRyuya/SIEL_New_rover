@@ -1,0 +1,1 @@
+/home/ryuya/rover_workspace/build/osr_interfaces/rosidl_typesupport_introspection_cpp/osr_interfaces/msg/detail/status__rosidl_typesupport_introspection_cpp.hpp

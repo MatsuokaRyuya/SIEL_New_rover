@@ -1,0 +1,1 @@
+/home/ryuya/rover_workspace/build/osr_gazebo/ament_cmake_core/osr_gazeboConfig.cmake

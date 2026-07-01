@@ -1,0 +1,430 @@
+[0.094s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.094s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=24, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x75d76b27f320>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x75d76b27f0b0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x75d76b27f0b0>>, mixin_verb=('build',))
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.118s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.118s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ryuya/rover_workspace'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER) by extensions ['ignore', 'ignore_ament_install']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER) by extension 'ignore'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER) by extension 'ignore_ament_install'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER) by extensions ['colcon_pkg']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER) by extension 'colcon_pkg'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER) by extensions ['colcon_meta']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER) by extension 'colcon_meta'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER) by extensions ['ros']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER) by extension 'ros'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER) by extensions ['cmake', 'python']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER) by extension 'cmake'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER) by extension 'python'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER) by extensions ['python_setup_py']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER) by extension 'python_setup_py'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/config) by extensions ['ignore', 'ignore_ament_install']
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/config) by extension 'ignore'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/config) by extension 'ignore_ament_install'
+[0.134s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/config) by extensions ['colcon_pkg']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/config) by extension 'colcon_pkg'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/config) by extensions ['colcon_meta']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/config) by extension 'colcon_meta'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/config) by extensions ['ros']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/config) by extension 'ros'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/config) by extensions ['cmake', 'python']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/config) by extension 'cmake'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/config) by extension 'python'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/config) by extensions ['python_setup_py']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/config) by extension 'python_setup_py'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/init_scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/init_scripts) by extension 'ignore'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/init_scripts) by extension 'ignore_ament_install'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/init_scripts) by extensions ['colcon_pkg']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/init_scripts) by extension 'colcon_pkg'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/init_scripts) by extensions ['colcon_meta']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/init_scripts) by extension 'colcon_meta'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/init_scripts) by extensions ['ros']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/init_scripts) by extension 'ros'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/init_scripts) by extensions ['cmake', 'python']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/init_scripts) by extension 'cmake'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/init_scripts) by extension 'python'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/init_scripts) by extensions ['python_setup_py']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/init_scripts) by extension 'python_setup_py'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/scripts) by extension 'ignore'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/scripts) by extension 'ignore_ament_install'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/scripts) by extensions ['colcon_pkg']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/scripts) by extension 'colcon_pkg'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/scripts) by extensions ['colcon_meta']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/scripts) by extension 'colcon_meta'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/scripts) by extensions ['ros']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/scripts) by extension 'ros'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/scripts) by extensions ['cmake', 'python']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/scripts) by extension 'cmake'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/scripts) by extension 'python'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/scripts) by extensions ['python_setup_py']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/scripts) by extension 'python_setup_py'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup) by extensions ['ignore', 'ignore_ament_install']
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup) by extension 'ignore'
+[0.135s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup) by extension 'ignore_ament_install'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup) by extensions ['colcon_pkg']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup) by extension 'colcon_pkg'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup) by extensions ['colcon_meta']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup) by extension 'colcon_meta'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup) by extensions ['ros']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup) by extension 'ros'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup) by extensions ['cmake', 'python']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup) by extension 'cmake'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup) by extension 'python'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup) by extensions ['python_setup_py']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup) by extension 'python_setup_py'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup/images) by extensions ['ignore', 'ignore_ament_install']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup/images) by extension 'ignore'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup/images) by extension 'ignore_ament_install'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup/images) by extensions ['colcon_pkg']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup/images) by extension 'colcon_pkg'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup/images) by extensions ['colcon_meta']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup/images) by extension 'colcon_meta'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup/images) by extensions ['ros']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup/images) by extension 'ros'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup/images) by extensions ['cmake', 'python']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup/images) by extension 'cmake'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup/images) by extension 'python'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup/images) by extensions ['python_setup_py']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(OSR_NEW_ROVER/setup/images) by extension 'python_setup_py'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_bringup) by extension 'ignore'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_bringup) by extension 'ignore_ament_install'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_bringup) by extensions ['colcon_pkg']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_bringup) by extension 'colcon_pkg'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_bringup) by extensions ['colcon_meta']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_bringup) by extension 'colcon_meta'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_bringup) by extensions ['ros']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_bringup) by extension 'ros'
+[0.138s] DEBUG:colcon.colcon_core.package_identification:Package 'src/osr_bringup' with type 'ros.ament_cmake' and name 'osr_bringup'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_control) by extensions ['ignore', 'ignore_ament_install']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_control) by extension 'ignore'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_control) by extension 'ignore_ament_install'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_control) by extensions ['colcon_pkg']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_control) by extension 'colcon_pkg'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_control) by extensions ['colcon_meta']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_control) by extension 'colcon_meta'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_control) by extensions ['ros']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_control) by extension 'ros'
+[0.138s] DEBUG:colcon.colcon_core.package_identification:Package 'src/osr_control' with type 'ros.ament_python' and name 'osr_control'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_gazebo) by extension 'ignore'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_gazebo) by extension 'ignore_ament_install'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_gazebo) by extensions ['colcon_pkg']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_gazebo) by extension 'colcon_pkg'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_gazebo) by extensions ['colcon_meta']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_gazebo) by extension 'colcon_meta'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_gazebo) by extensions ['ros']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_gazebo) by extension 'ros'
+[0.139s] DEBUG:colcon.colcon_core.package_identification:Package 'src/osr_gazebo' with type 'ros.ament_cmake' and name 'osr_gazebo'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_interfaces) by extension 'ignore'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_interfaces) by extension 'ignore_ament_install'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_interfaces) by extensions ['colcon_pkg']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_interfaces) by extension 'colcon_pkg'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_interfaces) by extensions ['colcon_meta']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_interfaces) by extension 'colcon_meta'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_interfaces) by extensions ['ros']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(src/osr_interfaces) by extension 'ros'
+[0.139s] DEBUG:colcon.colcon_core.package_identification:Package 'src/osr_interfaces' with type 'ros.ament_cmake' and name 'osr_interfaces'
+[0.139s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.140s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.140s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.140s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.140s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.151s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.151s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.153s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 344 installed packages in /opt/ros/jazzy
+[0.154s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_bringup' build argument 'cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_bringup' build argument 'cmake_target' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.179s] DEBUG:colcon.colcon_core.verb:Building package 'osr_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryuya/rover_workspace/build/osr_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryuya/rover_workspace/install/osr_bringup', 'merge_install': False, 'path': '/home/ryuya/rover_workspace/src/osr_bringup', 'symlink_install': True, 'test_result_base': None}
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_gazebo' build argument 'cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_gazebo' build argument 'cmake_target' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.179s] DEBUG:colcon.colcon_core.verb:Building package 'osr_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryuya/rover_workspace/build/osr_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryuya/rover_workspace/install/osr_gazebo', 'merge_install': False, 'path': '/home/ryuya/rover_workspace/src/osr_gazebo', 'symlink_install': True, 'test_result_base': None}
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.179s] DEBUG:colcon.colcon_core.verb:Building package 'osr_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryuya/rover_workspace/build/osr_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryuya/rover_workspace/install/osr_interfaces', 'merge_install': False, 'path': '/home/ryuya/rover_workspace/src/osr_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_control' build argument 'cmake_args' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_control' build argument 'cmake_target' from command line to 'None'
+[0.179s] Level 5:colcon.colcon_core.verb:set package 'osr_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.180s] Level 5:colcon.colcon_core.verb:set package 'osr_control' build argument 'cmake_clean_cache' from command line to 'False'
+[0.180s] Level 5:colcon.colcon_core.verb:set package 'osr_control' build argument 'cmake_clean_first' from command line to 'False'
+[0.180s] Level 5:colcon.colcon_core.verb:set package 'osr_control' build argument 'cmake_force_configure' from command line to 'False'
+[0.180s] Level 5:colcon.colcon_core.verb:set package 'osr_control' build argument 'ament_cmake_args' from command line to 'None'
+[0.180s] Level 5:colcon.colcon_core.verb:set package 'osr_control' build argument 'catkin_cmake_args' from command line to 'None'
+[0.180s] Level 5:colcon.colcon_core.verb:set package 'osr_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.180s] DEBUG:colcon.colcon_core.verb:Building package 'osr_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryuya/rover_workspace/build/osr_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryuya/rover_workspace/install/osr_control', 'merge_install': False, 'path': '/home/ryuya/rover_workspace/src/osr_control', 'symlink_install': True, 'test_result_base': None}
+[0.180s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.180s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.180s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ryuya/rover_workspace/src/osr_interfaces' with build type 'ament_cmake'
+[0.180s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ryuya/rover_workspace/src/osr_interfaces'
+[0.182s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.182s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.182s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.184s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ryuya/rover_workspace/src/osr_bringup' with build type 'ament_cmake'
+[0.184s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ryuya/rover_workspace/src/osr_bringup'
+[0.184s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.184s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.186s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ryuya/rover_workspace/src/osr_gazebo' with build type 'ament_cmake'
+[0.186s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ryuya/rover_workspace/src/osr_gazebo'
+[0.186s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.186s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.190s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryuya/rover_workspace/build/osr_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ryuya/rover_workspace/src/osr_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ryuya/rover_workspace/install/osr_interfaces
+[0.194s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryuya/rover_workspace/build/osr_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ryuya/rover_workspace/src/osr_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ryuya/rover_workspace/install/osr_bringup
+[0.196s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryuya/rover_workspace/build/osr_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ryuya/rover_workspace/src/osr_gazebo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ryuya/rover_workspace/install/osr_gazebo
+[1.208s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryuya/rover_workspace/build/osr_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ryuya/rover_workspace/src/osr_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ryuya/rover_workspace/install/osr_bringup
+[1.208s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryuya/rover_workspace/build/osr_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ryuya/rover_workspace/build/osr_bringup -- -j24 -l24
+[1.233s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryuya/rover_workspace/build/osr_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ryuya/rover_workspace/build/osr_bringup -- -j24 -l24
+[1.239s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryuya/rover_workspace/build/osr_bringup': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ryuya/rover_workspace/build/osr_bringup
+[1.352s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(osr_bringup)
+[1.352s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryuya/rover_workspace/build/osr_bringup' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ryuya/rover_workspace/build/osr_bringup
+[1.353s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_bringup' for CMake module files
+[1.353s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_bringup' for CMake config files
+[1.353s] Level 1:colcon.colcon_core.shell:create_environment_hook('osr_bringup', 'cmake_prefix_path')
+[1.353s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_bringup/share/osr_bringup/hook/cmake_prefix_path.ps1'
+[1.354s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryuya/rover_workspace/install/osr_bringup/share/osr_bringup/hook/cmake_prefix_path.dsv'
+[1.354s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_bringup/share/osr_bringup/hook/cmake_prefix_path.sh'
+[1.354s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_bringup/bin'
+[1.354s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_bringup/lib/pkgconfig/osr_bringup.pc'
+[1.355s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_bringup/lib/python3.12/site-packages'
+[1.355s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_bringup/bin'
+[1.355s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_bringup/share/osr_bringup/package.ps1'
+[1.355s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryuya/rover_workspace/install/osr_bringup/share/osr_bringup/package.dsv'
+[1.356s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_bringup/share/osr_bringup/package.sh'
+[1.356s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_bringup/share/osr_bringup/package.bash'
+[1.356s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_bringup/share/osr_bringup/package.zsh'
+[1.356s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryuya/rover_workspace/install/osr_bringup/share/colcon-core/packages/osr_bringup)
+[1.357s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(osr_bringup)
+[1.357s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_bringup' for CMake module files
+[1.357s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_bringup' for CMake config files
+[1.357s] Level 1:colcon.colcon_core.shell:create_environment_hook('osr_bringup', 'cmake_prefix_path')
+[1.357s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_bringup/share/osr_bringup/hook/cmake_prefix_path.ps1'
+[1.357s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryuya/rover_workspace/install/osr_bringup/share/osr_bringup/hook/cmake_prefix_path.dsv'
+[1.357s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_bringup/share/osr_bringup/hook/cmake_prefix_path.sh'
+[1.358s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_bringup/bin'
+[1.358s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_bringup/lib/pkgconfig/osr_bringup.pc'
+[1.358s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_bringup/lib/python3.12/site-packages'
+[1.358s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_bringup/bin'
+[1.358s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_bringup/share/osr_bringup/package.ps1'
+[1.358s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryuya/rover_workspace/install/osr_bringup/share/osr_bringup/package.dsv'
+[1.358s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_bringup/share/osr_bringup/package.sh'
+[1.359s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_bringup/share/osr_bringup/package.bash'
+[1.359s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_bringup/share/osr_bringup/package.zsh'
+[1.359s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryuya/rover_workspace/install/osr_bringup/share/colcon-core/packages/osr_bringup)
+[1.786s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryuya/rover_workspace/build/osr_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ryuya/rover_workspace/src/osr_gazebo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ryuya/rover_workspace/install/osr_gazebo
+[1.786s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryuya/rover_workspace/build/osr_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ryuya/rover_workspace/build/osr_gazebo -- -j24 -l24
+[2.543s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryuya/rover_workspace/build/osr_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ryuya/rover_workspace/src/osr_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ryuya/rover_workspace/install/osr_interfaces
+[2.544s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryuya/rover_workspace/build/osr_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ryuya/rover_workspace/build/osr_interfaces -- -j24 -l24
+[4.340s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryuya/rover_workspace/build/osr_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ryuya/rover_workspace/build/osr_interfaces -- -j24 -l24
+[4.341s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryuya/rover_workspace/build/osr_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ryuya/rover_workspace/build/osr_interfaces
+[4.901s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(osr_interfaces)
+[4.901s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_interfaces' for CMake module files
+[4.901s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryuya/rover_workspace/build/osr_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ryuya/rover_workspace/build/osr_interfaces
+[4.901s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_interfaces' for CMake config files
+[4.902s] Level 1:colcon.colcon_core.shell:create_environment_hook('osr_interfaces', 'cmake_prefix_path')
+[4.902s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/hook/cmake_prefix_path.ps1'
+[4.902s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/hook/cmake_prefix_path.dsv'
+[4.902s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/hook/cmake_prefix_path.sh'
+[4.902s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_interfaces/lib'
+[4.903s] Level 1:colcon.colcon_core.shell:create_environment_hook('osr_interfaces', 'ld_library_path_lib')
+[4.903s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/hook/ld_library_path_lib.ps1'
+[4.903s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/hook/ld_library_path_lib.dsv'
+[4.903s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/hook/ld_library_path_lib.sh'
+[4.903s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_interfaces/bin'
+[4.903s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_interfaces/lib/pkgconfig/osr_interfaces.pc'
+[4.903s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages'
+[4.903s] Level 1:colcon.colcon_core.shell:create_environment_hook('osr_interfaces', 'pythonpath')
+[4.903s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/hook/pythonpath.ps1'
+[4.904s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/hook/pythonpath.dsv'
+[4.904s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/hook/pythonpath.sh'
+[4.904s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_interfaces/bin'
+[4.904s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/package.ps1'
+[4.904s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/package.dsv'
+[4.905s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/package.sh'
+[4.905s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/package.bash'
+[4.905s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/package.zsh'
+[4.905s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryuya/rover_workspace/install/osr_interfaces/share/colcon-core/packages/osr_interfaces)
+[4.906s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(osr_interfaces)
+[4.906s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_interfaces' for CMake module files
+[4.906s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_interfaces' for CMake config files
+[4.906s] Level 1:colcon.colcon_core.shell:create_environment_hook('osr_interfaces', 'cmake_prefix_path')
+[4.906s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/hook/cmake_prefix_path.ps1'
+[4.906s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/hook/cmake_prefix_path.dsv'
+[4.907s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/hook/cmake_prefix_path.sh'
+[4.907s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_interfaces/lib'
+[4.907s] Level 1:colcon.colcon_core.shell:create_environment_hook('osr_interfaces', 'ld_library_path_lib')
+[4.907s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/hook/ld_library_path_lib.ps1'
+[4.907s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/hook/ld_library_path_lib.dsv'
+[4.907s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/hook/ld_library_path_lib.sh'
+[4.907s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_interfaces/bin'
+[4.907s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_interfaces/lib/pkgconfig/osr_interfaces.pc'
+[4.908s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages'
+[4.908s] Level 1:colcon.colcon_core.shell:create_environment_hook('osr_interfaces', 'pythonpath')
+[4.908s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/hook/pythonpath.ps1'
+[4.908s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/hook/pythonpath.dsv'
+[4.908s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/hook/pythonpath.sh'
+[4.908s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_interfaces/bin'
+[4.909s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/package.ps1'
+[4.909s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/package.dsv'
+[4.909s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/package.sh'
+[4.909s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/package.bash'
+[4.910s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/package.zsh'
+[4.910s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryuya/rover_workspace/install/osr_interfaces/share/colcon-core/packages/osr_interfaces)
+[4.910s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ryuya/rover_workspace/src/osr_control' with build type 'ament_python'
+[4.910s] Level 1:colcon.colcon_core.shell:create_environment_hook('osr_control', 'ament_prefix_path')
+[4.910s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_control/share/osr_control/hook/ament_prefix_path.ps1'
+[4.911s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryuya/rover_workspace/install/osr_control/share/osr_control/hook/ament_prefix_path.dsv'
+[4.911s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_control/share/osr_control/hook/ament_prefix_path.sh'
+[4.911s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.911s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.051s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ryuya/rover_workspace/src/osr_control'
+[5.052s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.052s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.375s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: build_py, install_headers, bdist_rpm, pytest, test, clean, bdist_wheel, dist_info, bdist, build_clib, extract_messages, build, compile_catalog, editable_wheel, develop, easy_install, install, build_scripts, bdist_egg, rotate, upload, install_egg_info, upload_docs, egg_info, build_ext, install_lib, install_data, setopt, update_catalog, ptr, sdist, alias, symlink_data, bdist_dumb, saveopts, install_scripts, init_catalog, register, check
+[5.538s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --always-unzip, --zip-ok, --help, --record, --site-dirs, --version, --exclude-scripts, --force-installation-into-system-dir, --optimize, --user, --quiet, --local-snapshots-ok, --index-url, --install-dir, --upgrade, --dry-run, --prefix, --install-layout, --find-links, --uninstall, --multi-version, --no-find-links, --verbose, --allow-hosts, --script-dir, --editable, --always-copy, --no-deps, --build-directory, --egg-path, --no-user-cfg
+[5.539s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryuya/rover_workspace/build/osr_control': AMENT_PREFIX_PATH=/home/ryuya/rover_workspace/install/osr_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ryuya/rover_workspace/install/osr_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/ryuya/rover_workspace/install/osr_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ryuya/rover_workspace/build/osr_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ryuya/rover_workspace/install/osr_control/lib/python3.12/site-packages:/home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ryuya/rover_workspace/build/osr_control/build --no-deps symlink_data
+[5.850s] Level 1:colcon.colcon_core.shell:create_environment_hook('osr_control', 'pythonpath_develop')
+[5.850s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/build/osr_control/share/osr_control/hook/pythonpath_develop.ps1'
+[5.850s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryuya/rover_workspace/build/osr_control' returned '0': AMENT_PREFIX_PATH=/home/ryuya/rover_workspace/install/osr_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ryuya/rover_workspace/install/osr_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/ryuya/rover_workspace/install/osr_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ryuya/rover_workspace/build/osr_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ryuya/rover_workspace/install/osr_control/lib/python3.12/site-packages:/home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ryuya/rover_workspace/build/osr_control/build --no-deps symlink_data
+[5.851s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryuya/rover_workspace/build/osr_control/share/osr_control/hook/pythonpath_develop.dsv'
+[5.851s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/build/osr_control/share/osr_control/hook/pythonpath_develop.sh'
+[5.851s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_control' for CMake module files
+[5.852s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_control' for CMake config files
+[5.852s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_control/lib'
+[5.852s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_control/bin'
+[5.852s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_control/lib/pkgconfig/osr_control.pc'
+[5.852s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_control/lib/python3.12/site-packages'
+[5.852s] Level 1:colcon.colcon_core.shell:create_environment_hook('osr_control', 'pythonpath')
+[5.852s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_control/share/osr_control/hook/pythonpath.ps1'
+[5.852s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryuya/rover_workspace/install/osr_control/share/osr_control/hook/pythonpath.dsv'
+[5.852s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_control/share/osr_control/hook/pythonpath.sh'
+[5.853s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_control/bin'
+[5.853s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(osr_control)
+[5.853s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_control/share/osr_control/package.ps1'
+[5.853s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryuya/rover_workspace/install/osr_control/share/osr_control/package.dsv'
+[5.853s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_control/share/osr_control/package.sh'
+[5.853s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_control/share/osr_control/package.bash'
+[5.853s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_control/share/osr_control/package.zsh'
+[5.854s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryuya/rover_workspace/install/osr_control/share/colcon-core/packages/osr_control)
+[10.427s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryuya/rover_workspace/build/osr_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ryuya/rover_workspace/build/osr_gazebo -- -j24 -l24
+[10.428s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryuya/rover_workspace/build/osr_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ryuya/rover_workspace/build/osr_gazebo
+[10.638s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(osr_gazebo)
+[10.638s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_gazebo' for CMake module files
+[10.639s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryuya/rover_workspace/build/osr_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ryuya/rover_workspace/build/osr_gazebo
+[10.639s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_gazebo' for CMake config files
+[10.639s] Level 1:colcon.colcon_core.shell:create_environment_hook('osr_gazebo', 'cmake_prefix_path')
+[10.639s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/hook/cmake_prefix_path.ps1'
+[10.639s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/hook/cmake_prefix_path.dsv'
+[10.640s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/hook/cmake_prefix_path.sh'
+[10.640s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_gazebo/lib'
+[10.640s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_gazebo/bin'
+[10.640s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_gazebo/lib/pkgconfig/osr_gazebo.pc'
+[10.640s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_gazebo/lib/python3.12/site-packages'
+[10.640s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_gazebo/bin'
+[10.640s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/package.ps1'
+[10.640s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/package.dsv'
+[10.641s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/package.sh'
+[10.641s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/package.bash'
+[10.641s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/package.zsh'
+[10.641s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryuya/rover_workspace/install/osr_gazebo/share/colcon-core/packages/osr_gazebo)
+[10.641s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(osr_gazebo)
+[10.641s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_gazebo' for CMake module files
+[10.641s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_gazebo' for CMake config files
+[10.642s] Level 1:colcon.colcon_core.shell:create_environment_hook('osr_gazebo', 'cmake_prefix_path')
+[10.642s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/hook/cmake_prefix_path.ps1'
+[10.642s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/hook/cmake_prefix_path.dsv'
+[10.642s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/hook/cmake_prefix_path.sh'
+[10.642s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_gazebo/lib'
+[10.642s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_gazebo/bin'
+[10.642s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_gazebo/lib/pkgconfig/osr_gazebo.pc'
+[10.642s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_gazebo/lib/python3.12/site-packages'
+[10.643s] Level 1:colcon.colcon_core.environment:checking '/home/ryuya/rover_workspace/install/osr_gazebo/bin'
+[10.643s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/package.ps1'
+[10.643s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/package.dsv'
+[10.643s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/package.sh'
+[10.643s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/package.bash'
+[10.643s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryuya/rover_workspace/install/osr_gazebo/share/osr_gazebo/package.zsh'
+[10.644s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryuya/rover_workspace/install/osr_gazebo/share/colcon-core/packages/osr_gazebo)
+[10.644s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[10.644s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[10.644s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[10.644s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[10.674s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[10.674s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[10.674s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[10.674s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[10.675s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[10.675s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[10.675s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryuya/rover_workspace/install/local_setup.ps1'
+[10.675s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ryuya/rover_workspace/install/_local_setup_util_ps1.py'
+[10.676s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryuya/rover_workspace/install/setup.ps1'
+[10.676s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryuya/rover_workspace/install/local_setup.sh'
+[10.676s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ryuya/rover_workspace/install/_local_setup_util_sh.py'
+[10.677s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryuya/rover_workspace/install/setup.sh'
+[10.677s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryuya/rover_workspace/install/local_setup.bash'
+[10.677s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryuya/rover_workspace/install/setup.bash'
+[10.678s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryuya/rover_workspace/install/local_setup.zsh'
+[10.678s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryuya/rover_workspace/install/setup.zsh'

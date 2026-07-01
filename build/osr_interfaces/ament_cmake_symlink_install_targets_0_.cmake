@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/ryuya/rover_workspace/build/osr_interfaces/rosidl_generator_py/osr_interfaces/osr_interfaces_s__rosidl_typesupport_fastrtps_c.so" "TARGETS" "osr_interfaces_s__rosidl_typesupport_fastrtps_c" "DESTINATION" "lib/python3.12/site-packages/osr_interfaces")

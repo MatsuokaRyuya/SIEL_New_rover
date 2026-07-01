@@ -1,0 +1,8 @@
+{
+  "package_name": "osr_interfaces",
+  "non_idl_tuples": [
+    "/home/ryuya/rover_workspace/src/osr_interfaces:msg/Status.msg",
+    "/home/ryuya/rover_workspace/src/osr_interfaces:msg/CommandDrive.msg",
+    "/home/ryuya/rover_workspace/src/osr_interfaces:msg/CommandCorner.msg"
+  ]
+}

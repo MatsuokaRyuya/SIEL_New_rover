@@ -1,0 +1,269 @@
+[0.009s] Invoking command in '/home/ryuya/rover_workspace/build/osr_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ryuya/rover_workspace/src/osr_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ryuya/rover_workspace/install/osr_interfaces
+[0.134s] -- The C compiler identification is GNU 13.3.0
+[0.411s] -- The CXX compiler identification is GNU 13.3.0
+[0.556s] -- Detecting C compiler ABI info
+[0.660s] -- Detecting C compiler ABI info - done
+[0.665s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.665s] -- Detecting C compile features
+[0.665s] -- Detecting C compile features - done
+[0.699s] -- Detecting CXX compiler ABI info
+[0.784s] -- Detecting CXX compiler ABI info - done
+[0.789s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.789s] -- Detecting CXX compile features
+[0.790s] -- Detecting CXX compile features - done
+[0.799s] -- Found rosidl_default_generators: 1.6.1 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[0.883s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.925s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.929s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.044s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.078s] -- Found rosidl_adapter: 4.6.9 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[1.397s] -- Found ament_cmake_ros: 0.12.1 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[1.627s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.945s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.947s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[2.026s] -- Found PythonExtra: /usr/bin/python3  
+[2.270s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[2.303s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.305s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[2.324s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.325s] -- Added test 'lint_cmake' to check CMake code style
+[2.326s] -- Added test 'xmllint' to check XML markup files
+[2.328s] -- Configuring done (2.3s)
+[2.352s] -- Generating done (0.0s)
+[2.358s] -- Build files have been written to: /home/ryuya/rover_workspace/build/osr_interfaces
+[2.362s] Invoked command in '/home/ryuya/rover_workspace/build/osr_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/ryuya/rover_workspace/src/osr_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ryuya/rover_workspace/install/osr_interfaces
+[2.363s] Invoking command in '/home/ryuya/rover_workspace/build/osr_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ryuya/rover_workspace/build/osr_interfaces -- -j24 -l24
+[2.393s] [  3%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[2.393s] [  3%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[2.398s] [  3%] Built target ament_cmake_python_symlink_osr_interfaces
+[2.517s] running egg_info
+[2.518s] creating osr_interfaces.egg-info
+[2.528s] writing osr_interfaces.egg-info/PKG-INFO
+[2.529s] writing dependency_links to osr_interfaces.egg-info/dependency_links.txt
+[2.529s] writing top-level names to osr_interfaces.egg-info/top_level.txt
+[2.529s] writing manifest file 'osr_interfaces.egg-info/SOURCES.txt'
+[2.539s] [  3%] Built target osr_interfaces__rosidl_generator_type_description
+[2.545s] [  5%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.548s] [  5%] Built target osr_interfaces__rs
+[2.553s] [  7%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.562s] reading manifest file 'osr_interfaces.egg-info/SOURCES.txt'
+[2.562s] writing manifest file 'osr_interfaces.egg-info/SOURCES.txt'
+[2.578s] [  7%] Built target ament_cmake_python_build_osr_interfaces_egg
+[2.739s] [  7%] Built target osr_interfaces__cpp
+[2.772s] [ 10%] [32mBuilding C object CMakeFiles/osr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/osr_interfaces/msg/detail/status__functions.c.o[0m
+[2.772s] [ 10%] [32mBuilding C object CMakeFiles/osr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/osr_interfaces/msg/detail/command_drive__description.c.o[0m
+[2.772s] [ 12%] [32mBuilding C object CMakeFiles/osr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/osr_interfaces/msg/detail/command_drive__functions.c.o[0m
+[2.772s] [ 14%] [32mBuilding C object CMakeFiles/osr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/osr_interfaces/msg/detail/status__description.c.o[0m
+[2.772s] [ 16%] [32mBuilding C object CMakeFiles/osr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/osr_interfaces/msg/detail/command_drive__type_support.c.o[0m
+[2.772s] [ 18%] [32mBuilding C object CMakeFiles/osr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/osr_interfaces/msg/detail/command_corner__description.c.o[0m
+[2.772s] [ 20%] [32mBuilding C object CMakeFiles/osr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/osr_interfaces/msg/detail/status__type_support.c.o[0m
+[2.773s] [ 21%] [32mBuilding C object CMakeFiles/osr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/osr_interfaces/msg/detail/command_corner__functions.c.o[0m
+[2.774s] [ 23%] [32mBuilding C object CMakeFiles/osr_interfaces__rosidl_generator_c.dir/rosidl_generator_c/osr_interfaces/msg/detail/command_corner__type_support.c.o[0m
+[2.811s] [ 25%] [32m[1mLinking C shared library libosr_interfaces__rosidl_generator_c.so[0m
+[2.887s] [ 25%] Built target osr_interfaces__rosidl_generator_c
+[2.894s] [ 29%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.894s] [ 29%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.894s] [ 30%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.894s] [ 32%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.895s] [ 34%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.896s] [ 36%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[3.089s] [ 38%] [32mBuilding CXX object CMakeFiles/osr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/osr_interfaces/msg/status__type_support.cpp.o[0m
+[3.089s] [ 40%] [32mBuilding CXX object CMakeFiles/osr_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/osr_interfaces/msg/status__type_support.cpp.o[0m
+[3.089s] [ 41%] [32mBuilding CXX object CMakeFiles/osr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/osr_interfaces/msg/command_drive__type_support.cpp.o[0m
+[3.090s] [ 43%] [32mBuilding CXX object CMakeFiles/osr_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/osr_interfaces/msg/command_corner__type_support.cpp.o[0m
+[3.092s] [ 45%] [32mBuilding CXX object CMakeFiles/osr_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/osr_interfaces/msg/command_corner__type_support.cpp.o[0m
+[3.092s] [ 47%] [32mBuilding CXX object CMakeFiles/osr_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/osr_interfaces/msg/command_drive__type_support.cpp.o[0m
+[3.109s] [ 49%] [32mBuilding C object CMakeFiles/osr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/osr_interfaces/msg/detail/command_drive__type_support.c.o[0m
+[3.110s] [ 50%] [32mBuilding C object CMakeFiles/osr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/osr_interfaces/msg/detail/status__type_support.c.o[0m
+[3.112s] [ 52%] [32mBuilding C object CMakeFiles/osr_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/osr_interfaces/msg/detail/command_corner__type_support.c.o[0m
+[3.113s] [ 54%] [32mBuilding CXX object CMakeFiles/osr_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/osr_interfaces/msg/detail/status__type_support.cpp.o[0m
+[3.115s] [ 56%] [32mBuilding CXX object CMakeFiles/osr_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/osr_interfaces/msg/detail/command_drive__type_support.cpp.o[0m
+[3.116s] [ 58%] [32mBuilding CXX object CMakeFiles/osr_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/osr_interfaces/msg/detail/command_corner__type_support.cpp.o[0m
+[3.139s] [ 60%] [32m[1mLinking CXX shared library libosr_interfaces__rosidl_typesupport_c.so[0m
+[3.155s] [ 61%] [32mBuilding CXX object CMakeFiles/osr_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/osr_interfaces/msg/detail/dds_fastrtps/status__type_support.cpp.o[0m
+[3.157s] [ 63%] [32mBuilding CXX object CMakeFiles/osr_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/osr_interfaces/msg/detail/dds_fastrtps/command_drive__type_support.cpp.o[0m
+[3.158s] [ 65%] [32m[1mLinking C shared library libosr_interfaces__rosidl_typesupport_introspection_c.so[0m
+[3.159s] [ 67%] [32mBuilding CXX object CMakeFiles/osr_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/osr_interfaces/msg/detail/dds_fastrtps/command_corner__type_support.cpp.o[0m
+[3.165s] [ 69%] [32mBuilding CXX object CMakeFiles/osr_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/osr_interfaces/msg/detail/command_corner__type_support_c.cpp.o[0m
+[3.165s] [ 70%] [32mBuilding CXX object CMakeFiles/osr_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/osr_interfaces/msg/detail/command_drive__type_support_c.cpp.o[0m
+[3.167s] [ 72%] [32mBuilding CXX object CMakeFiles/osr_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/osr_interfaces/msg/detail/status__type_support_c.cpp.o[0m
+[3.255s] [ 72%] Built target osr_interfaces__rosidl_typesupport_c
+[3.259s] [ 72%] Built target osr_interfaces__rosidl_typesupport_introspection_c
+[3.378s] [ 74%] [32m[1mLinking CXX shared library libosr_interfaces__rosidl_typesupport_cpp.so[0m
+[3.431s] [ 76%] [32m[1mLinking CXX shared library libosr_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[3.450s] [ 76%] Built target osr_interfaces__rosidl_typesupport_cpp
+[3.528s] [ 78%] [32m[1mLinking CXX shared library libosr_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[3.528s] [ 78%] Built target osr_interfaces__rosidl_typesupport_introspection_cpp
+[3.528s] [ 80%] [32m[1mLinking CXX shared library libosr_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[3.611s] [ 80%] Built target osr_interfaces__rosidl_typesupport_fastrtps_c
+[3.613s] [ 80%] Built target osr_interfaces__rosidl_typesupport_fastrtps_cpp
+[3.626s] [ 80%] Built target osr_interfaces
+[3.638s] [ 81%] [34m[1mGenerating Python code for ROS interfaces[0m
+[3.885s] [ 81%] Built target osr_interfaces__py
+[3.898s] [ 83%] [32mBuilding C object CMakeFiles/osr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/osr_interfaces/msg/_status_s.c.o[0m
+[3.898s] [ 85%] [32mBuilding C object CMakeFiles/osr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/osr_interfaces/msg/_command_drive_s.c.o[0m
+[3.898s] [ 87%] [32mBuilding C object CMakeFiles/osr_interfaces__rosidl_generator_py.dir/rosidl_generator_py/osr_interfaces/msg/_command_corner_s.c.o[0m
+[3.996s] [ 89%] [32m[1mLinking C shared library libosr_interfaces__rosidl_generator_py.so[0m
+[4.044s] [ 89%] Built target osr_interfaces__rosidl_generator_py
+[4.056s] [ 94%] [32mBuilding C object CMakeFiles/osr_interfaces_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/osr_interfaces/_osr_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[4.056s] [ 94%] [32mBuilding C object CMakeFiles/osr_interfaces_s__rosidl_typesupport_c.dir/rosidl_generator_py/osr_interfaces/_osr_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[4.056s] [ 94%] [32mBuilding C object CMakeFiles/osr_interfaces_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/osr_interfaces/_osr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[4.111s] [100%] [32m[1mLinking C shared module rosidl_generator_py/osr_interfaces/osr_interfaces_s__rosidl_typesupport_introspection_c.so[0m
+[4.111s] [100%] [32m[1mLinking C shared module rosidl_generator_py/osr_interfaces/osr_interfaces_s__rosidl_typesupport_fastrtps_c.so[0m
+[4.112s] [100%] [32m[1mLinking C shared module rosidl_generator_py/osr_interfaces/osr_interfaces_s__rosidl_typesupport_c.so[0m
+[4.152s] [100%] Built target osr_interfaces_s__rosidl_typesupport_c
+[4.152s] [100%] Built target osr_interfaces_s__rosidl_typesupport_fastrtps_c
+[4.152s] [100%] Built target osr_interfaces_s__rosidl_typesupport_introspection_c
+[4.159s] Invoked command in '/home/ryuya/rover_workspace/build/osr_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/ryuya/rover_workspace/build/osr_interfaces -- -j24 -l24
+[4.160s] Invoking command in '/home/ryuya/rover_workspace/build/osr_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ryuya/rover_workspace/build/osr_interfaces
+[4.165s] -- Install configuration: ""
+[4.165s] -- Execute custom install script
+[4.166s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/ament_index/resource_index/rosidl_interfaces/osr_interfaces
+[4.172s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/msg/Status.json
+[4.177s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/msg/CommandDrive.json
+[4.182s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/msg/CommandCorner.json
+[4.187s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/command_corner.h
+[4.192s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/command_drive.h
+[4.198s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_corner__functions.h
+[4.203s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_corner__struct.h
+[4.208s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_corner__type_support.h
+[4.213s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_drive__functions.h
+[4.218s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_drive__struct.h
+[4.224s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_drive__type_support.h
+[4.229s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/status__functions.h
+[4.234s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/status__struct.h
+[4.239s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/status__type_support.h
+[4.244s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/rosidl_generator_c__visibility_control.h
+[4.248s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/status.h
+[4.253s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/environment/library_path.sh
+[4.258s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/environment/library_path.dsv
+[4.263s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_corner__rosidl_typesupport_fastrtps_c.h
+[4.268s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_drive__rosidl_typesupport_fastrtps_c.h
+[4.273s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/status__rosidl_typesupport_fastrtps_c.h
+[4.279s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.284s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_corner__rosidl_typesupport_introspection_c.h
+[4.288s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_drive__rosidl_typesupport_introspection_c.h
+[4.293s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/status__rosidl_typesupport_introspection_c.h
+[4.298s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[4.303s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/command_corner.hpp
+[4.308s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/command_drive.hpp
+[4.313s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_corner__builder.hpp
+[4.318s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_corner__struct.hpp
+[4.324s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_corner__traits.hpp
+[4.329s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_corner__type_support.hpp
+[4.334s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_drive__builder.hpp
+[4.339s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_drive__struct.hpp
+[4.343s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_drive__traits.hpp
+[4.348s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_drive__type_support.hpp
+[4.353s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/status__builder.hpp
+[4.358s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/status__struct.hpp
+[4.363s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/status__traits.hpp
+[4.367s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/status__type_support.hpp
+[4.372s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[4.377s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/status.hpp
+[4.382s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_corner__rosidl_typesupport_fastrtps_cpp.hpp
+[4.387s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_drive__rosidl_typesupport_fastrtps_cpp.hpp
+[4.392s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/status__rosidl_typesupport_fastrtps_cpp.hpp
+[4.397s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[4.401s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_corner__rosidl_typesupport_introspection_cpp.hpp
+[4.406s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/command_drive__rosidl_typesupport_introspection_cpp.hpp
+[4.411s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/include/osr_interfaces/osr_interfaces/msg/detail/status__rosidl_typesupport_introspection_cpp.hpp
+[4.416s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/environment/pythonpath.sh
+[4.422s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/environment/pythonpath.dsv
+[4.427s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces-0.0.0-py3.12.egg-info/PKG-INFO
+[4.432s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces-0.0.0-py3.12.egg-info/SOURCES.txt
+[4.437s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces-0.0.0-py3.12.egg-info/dependency_links.txt
+[4.441s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces-0.0.0-py3.12.egg-info/top_level.txt
+[4.447s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/__init__.py
+[4.451s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/_osr_interfaces_s.ep.rosidl_typesupport_c.c
+[4.456s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/_osr_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[4.461s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/_osr_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[4.466s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/msg/__init__.py
+[4.471s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/msg/_command_corner.py
+[4.475s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/msg/_command_corner_s.c
+[4.480s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/msg/_command_drive.py
+[4.485s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/msg/_command_drive_s.c
+[4.489s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/msg/_status.py
+[4.494s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/msg/_status_s.c
+[4.498s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/osr_interfaces_s__rosidl_typesupport_c.so
+[4.503s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/osr_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[4.508s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/osr_interfaces_s__rosidl_typesupport_introspection_c.so
+[4.513s] -- Up-to-date symlink: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/osr_interfaces_s__rosidl_typesupport_fastrtps_c.so
+[4.513s] -- Up-to-date symlink: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/osr_interfaces_s__rosidl_typesupport_introspection_c.so
+[4.513s] -- Up-to-date symlink: /home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/osr_interfaces_s__rosidl_typesupport_c.so
+[4.514s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/ament_index/resource_index/rust_packages/osr_interfaces
+[4.521s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/rust/Cargo.toml
+[4.526s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/rust/build.rs
+[4.531s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/rust/src/lib.rs
+[4.536s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/rust/src/msg.rs
+[4.541s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/rust/src/msg/rmw.rs
+[4.546s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/msg/Status.idl
+[4.551s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/msg/CommandDrive.idl
+[4.556s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/msg/CommandCorner.idl
+[4.561s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/msg/Status.msg
+[4.565s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/msg/CommandDrive.msg
+[4.571s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/msg/CommandCorner.msg
+[4.576s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/ament_index/resource_index/package_run_dependencies/osr_interfaces
+[4.581s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/ament_index/resource_index/parent_prefix_path/osr_interfaces
+[4.586s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/environment/ament_prefix_path.sh
+[4.590s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/environment/ament_prefix_path.dsv
+[4.595s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/environment/path.sh
+[4.600s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/environment/path.dsv
+[4.605s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/local_setup.bash
+[4.609s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/local_setup.sh
+[4.615s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/local_setup.zsh
+[4.620s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/local_setup.dsv
+[4.626s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/package.dsv
+[4.631s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/ament_index/resource_index/packages/osr_interfaces
+[4.636s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/rosidl_cmake-extras.cmake
+[4.641s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.646s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[4.650s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[4.655s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[4.660s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.665s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.670s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[4.675s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/osr_interfacesConfig.cmake
+[4.680s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/osr_interfacesConfig-version.cmake
+[4.685s] -- Symlinking: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/package.xml
+[4.689s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/lib/libosr_interfaces__rosidl_generator_c.so
+[4.690s] -- Set non-toolchain portion of runtime path of "/home/ryuya/rover_workspace/install/osr_interfaces/lib/libosr_interfaces__rosidl_generator_c.so" to ""
+[4.690s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/lib/libosr_interfaces__rosidl_typesupport_fastrtps_c.so
+[4.690s] -- Set non-toolchain portion of runtime path of "/home/ryuya/rover_workspace/install/osr_interfaces/lib/libosr_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[4.690s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/lib/libosr_interfaces__rosidl_typesupport_introspection_c.so
+[4.690s] -- Set non-toolchain portion of runtime path of "/home/ryuya/rover_workspace/install/osr_interfaces/lib/libosr_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[4.690s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/lib/libosr_interfaces__rosidl_typesupport_c.so
+[4.690s] -- Set non-toolchain portion of runtime path of "/home/ryuya/rover_workspace/install/osr_interfaces/lib/libosr_interfaces__rosidl_typesupport_c.so" to ""
+[4.690s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/lib/libosr_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[4.690s] -- Set non-toolchain portion of runtime path of "/home/ryuya/rover_workspace/install/osr_interfaces/lib/libosr_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[4.690s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/lib/libosr_interfaces__rosidl_typesupport_introspection_cpp.so
+[4.690s] -- Set non-toolchain portion of runtime path of "/home/ryuya/rover_workspace/install/osr_interfaces/lib/libosr_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[4.690s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/lib/libosr_interfaces__rosidl_typesupport_cpp.so
+[4.690s] -- Set non-toolchain portion of runtime path of "/home/ryuya/rover_workspace/install/osr_interfaces/lib/libosr_interfaces__rosidl_typesupport_cpp.so" to ""
+[4.713s] Listing '/home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces'...
+[4.713s] Compiling '/home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/__init__.py'...
+[4.713s] Listing '/home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/msg'...
+[4.713s] Compiling '/home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/msg/__init__.py'...
+[4.713s] Compiling '/home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/msg/_command_corner.py'...
+[4.713s] Compiling '/home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/msg/_command_drive.py'...
+[4.713s] Compiling '/home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages/osr_interfaces/msg/_status.py'...
+[4.717s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/lib/libosr_interfaces__rosidl_generator_py.so
+[4.717s] -- Set non-toolchain portion of runtime path of "/home/ryuya/rover_workspace/install/osr_interfaces/lib/libosr_interfaces__rosidl_generator_py.so" to ""
+[4.717s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/export_osr_interfaces__rosidl_generator_cExport.cmake
+[4.717s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/export_osr_interfaces__rosidl_generator_cExport-noconfig.cmake
+[4.717s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/export_osr_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[4.717s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/export_osr_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[4.718s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/osr_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[4.718s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/osr_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[4.718s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/osr_interfaces__rosidl_typesupport_cExport.cmake
+[4.718s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/osr_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[4.718s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/export_osr_interfaces__rosidl_generator_cppExport.cmake
+[4.718s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/export_osr_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[4.718s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/export_osr_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[4.718s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/osr_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[4.718s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/osr_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[4.718s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/osr_interfaces__rosidl_typesupport_cppExport.cmake
+[4.718s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/osr_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[4.718s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/export_osr_interfaces__rosidl_generator_pyExport.cmake
+[4.718s] -- Installing: /home/ryuya/rover_workspace/install/osr_interfaces/share/osr_interfaces/cmake/export_osr_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[4.720s] Invoked command in '/home/ryuya/rover_workspace/build/osr_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/ryuya/rover_workspace/build/osr_interfaces

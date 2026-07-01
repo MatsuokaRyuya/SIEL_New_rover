@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "osr_interfaces__rs",
+		"source" : "/home/ryuya/rover_workspace/build/osr_interfaces/osr_interfaces__rs"
+	}
+}

@@ -1,0 +1,32 @@
+[0.629s] Invoking command in '/home/ryuya/rover_workspace/build/osr_control': AMENT_PREFIX_PATH=/home/ryuya/rover_workspace/install/osr_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ryuya/rover_workspace/install/osr_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/ryuya/rover_workspace/install/osr_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ryuya/rover_workspace/build/osr_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ryuya/rover_workspace/install/osr_control/lib/python3.12/site-packages:/home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ryuya/rover_workspace/build/osr_control/build --no-deps symlink_data
+[0.791s] running develop
+[0.867s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[0.867s]   self.local_index = Environment(self.shadow_path + sys.path)
+[0.883s] running egg_info
+[0.883s] creating osr_control.egg-info
+[0.894s] writing osr_control.egg-info/PKG-INFO
+[0.894s] writing dependency_links to osr_control.egg-info/dependency_links.txt
+[0.894s] writing entry points to osr_control.egg-info/entry_points.txt
+[0.894s] writing requirements to osr_control.egg-info/requires.txt
+[0.894s] writing top-level names to osr_control.egg-info/top_level.txt
+[0.894s] writing manifest file 'osr_control.egg-info/SOURCES.txt'
+[0.913s] reading manifest file 'osr_control.egg-info/SOURCES.txt'
+[0.913s] writing manifest file 'osr_control.egg-info/SOURCES.txt'
+[0.923s] running build_ext
+[0.923s] Creating /home/ryuya/rover_workspace/install/osr_control/lib/python3.12/site-packages/osr-control.egg-link (link to .)
+[0.923s] Installing ina260 script to /home/ryuya/rover_workspace/install/osr_control/lib/osr_control
+[0.923s] Installing joy_extras script to /home/ryuya/rover_workspace/install/osr_control/lib/osr_control
+[0.923s] Installing roboclaw_wrapper script to /home/ryuya/rover_workspace/install/osr_control/lib/osr_control
+[0.923s] Installing rover script to /home/ryuya/rover_workspace/install/osr_control/lib/osr_control
+[0.924s] Installing servo_control script to /home/ryuya/rover_workspace/install/osr_control/lib/osr_control
+[0.924s] 
+[0.924s] Installed /home/ryuya/rover_workspace/build/osr_control
+[0.924s] running symlink_data
+[0.924s] creating /home/ryuya/rover_workspace/install/osr_control/share/ament_index
+[0.924s] creating /home/ryuya/rover_workspace/install/osr_control/share/ament_index/resource_index
+[0.924s] creating /home/ryuya/rover_workspace/install/osr_control/share/ament_index/resource_index/packages
+[0.924s] symbolically linking /home/ryuya/rover_workspace/build/osr_control/resource/osr_control -> /home/ryuya/rover_workspace/install/osr_control/share/ament_index/resource_index/packages
+[0.924s] symbolically linking /home/ryuya/rover_workspace/build/osr_control/package.xml -> /home/ryuya/rover_workspace/install/osr_control/share/osr_control
+[0.924s] creating /home/ryuya/rover_workspace/install/osr_control/share/osr_control/launch
+[0.924s] creating /home/ryuya/rover_workspace/install/osr_control/share/osr_control/config
+[0.940s] Invoked command in '/home/ryuya/rover_workspace/build/osr_control' returned '0': AMENT_PREFIX_PATH=/home/ryuya/rover_workspace/install/osr_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ryuya/rover_workspace/install/osr_interfaces:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/ryuya/rover_workspace/install/osr_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ryuya/rover_workspace/build/osr_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ryuya/rover_workspace/install/osr_control/lib/python3.12/site-packages:/home/ryuya/rover_workspace/install/osr_interfaces/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/ryuya/rover_workspace/build/osr_control/build --no-deps symlink_data

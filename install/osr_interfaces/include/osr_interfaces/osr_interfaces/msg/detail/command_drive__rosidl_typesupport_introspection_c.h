@@ -1,0 +1,1 @@
+/home/ryuya/rover_workspace/build/osr_interfaces/rosidl_typesupport_introspection_c/osr_interfaces/msg/detail/command_drive__rosidl_typesupport_introspection_c.h
