@@ -4,7 +4,7 @@ import math
 from rclpy.parameter import Parameter
 
 # project libraries
-from adafruit_servokit import ServoKit
+from adafruit_servokit import ServoKit#pip install する
 
 # message imports
 from sensor_msgs.msg import JointState
@@ -12,7 +12,13 @@ from osr_interfaces.msg import CommandCorner, Status
 
 RAD_TO_DEG = 180 / math.pi
 
+# 0番ピン: 右後ろ（corner_right_back）
 
+# 1番ピン: 右前（corner_right_front）
+
+# 2番ピン: 左前（corner_left_front）
+
+# 3番ピン: 左後ろ（corner_left_back）
 class ServoWrapper(Node):
     """Interface between the PCA9685 controlling the servos and the higher level rover code"""
     corner_motors = ['corner_right_back', 'corner_right_front', 'corner_left_front', 'corner_left_back']
