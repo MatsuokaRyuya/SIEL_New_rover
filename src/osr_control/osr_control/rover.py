@@ -2,7 +2,7 @@ import math
 from functools import partial
 
 import rclpy
-from rclpy.parameter import Parameter
+from rclpy.parameter import Parameter#osr_param.yaml
 from rclpy.node import Node
 import tf2_ros
 
@@ -10,7 +10,7 @@ from sensor_msgs.msg import JointState
 from geometry_msgs.msg import Twist, TwistWithCovariance, TransformStamped
 from nav_msgs.msg import Odometry
 from std_msgs.msg import Float64
-from osr_interfaces.msg import CommandDrive, CommandCorner
+from osr_interfaces.msg import CommandDrive, CommandCorner# 速度をまとめて入れとく型のメッセージなんてないから作る
 
 
 class Rover(Node):
@@ -97,7 +97,7 @@ class Rover(Node):
         :param intuitive: determines the mode
         """
         # check if we're supposed to rotate in place
-        if twist_msg.angular.y and not twist_msg.linear.x:
+        if twist_msg.angular.y and not twist_msg.linear.x:#0=false, 1=true コントローラからの指令で前進速度が0かつ旋回速度が0でない場合どっちもtrueだから、turn in place
             # command corners to point to center
             corner_cmd_msg, drive_cmd_msg = self.calculate_rotate_in_place_cmd(twist_msg)
 
@@ -108,7 +108,7 @@ class Rover(Node):
 
             # if we're turning, calculate the max velocity the middle of the rover can go
             max_vel = abs(desired_turning_radius) / (abs(desired_turning_radius) + self.d1) * self.max_vel
-            if math.isnan(max_vel):  # turning radius infinite, going straight
+            if math.isnan(max_vel):  # turning radius infinite, going straight （max_velが数じゃないときにtrue投げる）
                 max_vel = self.max_vel
             velocity = min(max_vel, twist_msg.linear.x)
             self.get_logger().debug("velocity drive cmd: {} m/s".format(velocity), throttle_duration_sec=1)
@@ -123,15 +123,15 @@ class Rover(Node):
         self.drive_cmd_pub.publish(drive_cmd_msg)
 
     def enc_cb(self, msg):
-        """When we get a JointState message from the drive or corner motors"""
+        """When we get a JointState message from the drive or corner motors"""#JointStateは車輪名前の文字列リストとpositionというサーボの角度の数値リスト、velocityという速度の値リストがばらばらのリストとして入ってる型、roboclaw_wrapperとservo_controlが中身をうまく入れてくれてる
         # merge dictionaries since we could get corner or drive motor feedback
-        self.curr_positions = {**self.curr_positions, **dict(zip(msg.name, msg.position))}
-        self.curr_velocities = {**self.curr_velocities, **dict(zip(msg.name, msg.velocity))}
-        if self.should_calculate_odom and len(self.curr_positions) == 10:
+        self.curr_positions = {**self.curr_positions, **dict(zip(msg.name, msg.position))}#msg.nameは車輪の場所に対応、msg.positionは車輪のステアリング角度、zip(,)は二つのリストの中身をその順番にペアにしていく関数で、dict()はキーと値のセット（辞書型）に変換する。
+        self.curr_velocities = {**self.curr_velocities, **dict(zip(msg.name, msg.velocity))}#**は辞書型の展開に使う。辞書データの前につけることでキーと値をセットとした変数をアンパックできる、{,}で同じ名前のキーがあったら左を右で更新する
+        if self.should_calculate_odom and len(self.curr_positions) == 8:# **10->8へ変更**odometry計算機能がONかつカレントポジション辞書の長さが10、velocityはサーボの方のmsgにはないからposition（サーボなら角度、ドライブなら回転した量）を長さ10で判定
             # measure how much time has elapsed since our last update
             now = self.get_clock().now()
-            dt = float(now.nanoseconds - (self.odometry.header.stamp.sec*10**9 + self.odometry.header.stamp.nanosec)) / 10**9
-            self.forward_kinematics()
+            dt = float(now.nanoseconds - (self.odometry.header.stamp.sec*10**9 + self.odometry.header.stamp.nanosec)) / 10**9#経過時間（ナノ秒単位）
+            self.forward_kinematics()#10個のモーターからのデータをもとにローバー全体の直進速度と旋回速度を計算し、self.curr_twistに保存
             dx = self.curr_twist.twist.linear.x * dt
             dth = self.curr_twist.twist.angular.z * dt
             # angle is straightforward: in 2D it's additive
@@ -187,24 +187,24 @@ class Rover(Node):
         :param radius: Current turning radius in m
         """
         # clip the value to the maximum allowed velocity
-        speed = max(-self.max_vel, min(self.max_vel, speed))
+        speed = max(-self.max_vel, min(self.max_vel, speed))#
         cmd_msg = CommandDrive()
         if speed == 0:
             return cmd_msg
 
-        elif abs(current_radius) >= self.max_radius:  # Very large turning radius, all wheels same speed
+        elif abs(current_radius) >= self.max_radius:  # Very large turning radius, all wheels same speed、まっすぐ走ってるときかな
             angular_vel = speed / self.wheel_radius
             cmd_msg.left_front_vel = angular_vel
             cmd_msg.left_middle_vel = angular_vel
             cmd_msg.left_back_vel = angular_vel
-            cmd_msg.right_back_vel = -angular_vel
+            cmd_msg.right_back_vel = -angular_vel#全部前進する方向にするために、モーターの向き的にマイナスになる
             cmd_msg.right_middle_vel = -angular_vel
             cmd_msg.right_front_vel = -angular_vel
 
             return cmd_msg
 
         else:
-            # for the calculations, we assume positive radius (turn left) and adjust later
+            # for the calculations, we assume positive radius (turn left) and adjust later ローバー全体の旋回半径から、それぞれの車輪が駆動する角速度に落とし込んでる
             radius = abs(current_radius)
             # the entire vehicle moves with the same angular velocity dictated by the desired speed,
             # around the radius of the turn. v = r * omega
@@ -240,7 +240,7 @@ class Rover(Node):
 
             return cmd_msg
 
-    def calculate_corner_positions(self, radius):
+    def calculate_corner_positions(self, radius):#旋回半径に必要になる各サーボモーターの回転量を計算する
         """
         Takes a turning radius and computes the required angle for each corner motor
 
@@ -274,7 +274,7 @@ class Rover(Node):
 
         return cmd_msg
 
-    def calculate_rotate_in_place_cmd(self, twist):
+    def calculate_rotate_in_place_cmd(self, twist):#turn in place
         """
         Calculate corner angles and drive motor speeds to rotate the robot in place (turning radius 0)
         """
@@ -300,7 +300,7 @@ class Rover(Node):
 
         return corner_cmd, drive_cmd 
 
-    def twist_to_turning_radius(self, twist, clip=True, intuitive_mode=False):
+    def twist_to_turning_radius(self, twist, clip=True, intuitive_mode=False):#旋回指令から実際の旋回半径を計算する
         """
         Convert a commanded twist into an actual turning radius
 
@@ -339,7 +339,7 @@ class Rover(Node):
 
         return radius
 
-    def angle_to_turning_radius(self, angle):
+    def angle_to_turning_radius(self, angle):#ローバーの前方中央に仮想のwheelがあるとして、それの角度から旋回半径を求める
         """
         Convert the angle of a virtual wheel positioned in the middle of the front two wheels to a turning radius
         Turning left and positive angle corresponds to a positive turning radius
@@ -354,7 +354,7 @@ class Rover(Node):
 
         return radius
 
-    def forward_kinematics(self):
+    def forward_kinematics(self):#エンコーダとかサーボの回転量から実際のローバーの動きを順運動学するメソッド、４輪版に変更する
         """
         Calculate current twist of the rover given current drive and corner motor velocities
         Also approximate current turning radius.
@@ -402,6 +402,52 @@ class Rover(Node):
             self.curr_twist.twist.angular.z = drive_angular_velocity * self.wheel_radius / self.d4  # Use width from middle wheel to center of rover
             self.get_logger().debug(f"Turn-in-place detected. Angular velocity: {self.curr_twist.twist.angular.z}", throttle_duration_sec=1)
 
+"""
+def forward_kinematics(self):#４輪バージョン
+        
+        #Calculate current twist of the 4-wheel independent drive and steering rover.
+        
+        # 1. 4つのサーボの現在の実際の角度を取得（向きの反転を考慮）
+        theta_fl = -self.curr_positions.get('corner_left_front', 0.0)
+        theta_fr = -self.curr_positions.get('corner_right_front', 0.0)
+        theta_bl = -self.curr_positions.get('corner_left_back', 0.0)
+        theta_br = -self.curr_positions.get('corner_right_back', 0.0)
+
+        # 2. 4つの駆動輪の現在の実際の回転速度（rad/s）を取得
+        v_fl = self.curr_velocities.get('drive_left_front', 0.0) * self.wheel_radius
+        v_fr = self.curr_velocities.get('drive_right_front', 0.0) * self.wheel_radius
+        v_bl = self.curr_velocities.get('drive_left_back', 0.0) * self.wheel_radius
+        v_br = self.curr_velocities.get('drive_right_back', 0.0) * self.wheel_radius
+
+        # 3. 各車輪の「進行方向（X方向）」の実績速度を三角関数で割り出す
+        # タイヤの速度ベクトルをロボットの正面方向（cos）に分解します
+        v_x_fl = v_fl * math.cos(theta_fl)
+        v_x_fr = v_fr * math.cos(theta_fr)
+        v_x_bl = v_bl * math.cos(theta_bl)
+        v_x_br = v_br * math.cos(theta_br)
+
+        # 4. ローバー全体の現在の直進速度（linear.x）は、4輪の正面速度の平均値
+        self.curr_twist.twist.linear.x = (v_x_fl + v_x_fr + v_x_bl + v_x_br) / 4.0
+
+        # 5. ローバー全体の現在の旋回速度（angular.z）を計算する
+        # トレッド幅の半分をd1（左右間隔の半分）、ホイールベースの半分をd3（前後間隔の半分）と仮定
+        # 各タイヤの速度差と向きから、中心まわりの回転（角速度）を逆算します
+        try:
+            # 左右の速度差による回転成分を、機体の寸法パラメータ（self.d1, self.d3）で割る
+            # 前輪側の回転推測
+            omega_front = (v_fl * math.sin(theta_fl) - v_fr * math.sin(theta_fr)) / (2.0 * self.d1)
+            # 後輪側の回転推測
+            omega_back = (v_bl * math.sin(theta_bl) - v_br * math.sin(theta_br)) / (2.0 * self.d1)
+            
+            # 左右の駆動速度差による標準的な差動回転成分（直進成分からの回転）
+            omega_drive = ((v_x_fr - v_x_fl) + (v_x_br - v_x_bl)) / (4.0 * self.d1)
+            
+            # これらを総合的に平均して、もっともらしい全体の旋回角速度（rad/s）を決定
+            self.curr_twist.twist.angular.z = (omega_front + omega_back + omega_drive) / 3.0
+
+        except ZeroDivisionError:
+            self.curr_twist.twist.angular.z = 0.0
+"""
 
 def main(args=None):
     rclpy.init(args=args)

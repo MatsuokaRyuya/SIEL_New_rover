@@ -4,3 +4,11 @@ ROS/osr_bringup/config/*_mod.yaml
 *.sublime-project
 *.sublime-workspace
 .DS_Store
+*.make
+*.cmake
+*.env
+
+# OSR/ROS 2 のビルド・実行生成ファイルを無視
+log/
+build/
+install/
