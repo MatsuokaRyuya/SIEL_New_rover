@@ -26,9 +26,9 @@ class Rover(Node):
             namespace='',
             parameters=[
                 ('rover_dimensions.d1', Parameter.Type.DOUBLE),
-                ('rover_dimensions.d2', Parameter.Type.DOUBLE),
+                #('rover_dimensions.d2', Parameter.Type.DOUBLE),
                 ('rover_dimensions.d3', Parameter.Type.DOUBLE),
-                ('rover_dimensions.d4', Parameter.Type.DOUBLE),
+                #('rover_dimensions.d4', Parameter.Type.DOUBLE),
                 ('rover_dimensions.wheel_radius', Parameter.Type.DOUBLE),
                 ('drive_no_load_rpm', Parameter.Type.DOUBLE),
                 ('enable_odometry', Parameter.Type.BOOL),
@@ -36,9 +36,9 @@ class Rover(Node):
             ]
         )
         self.d1 = self.get_parameter('rover_dimensions.d1').get_parameter_value().double_value
-        self.d2 = self.get_parameter('rover_dimensions.d2').get_parameter_value().double_value
+        #self.d2 = self.get_parameter('rover_dimensions.d2').get_parameter_value().double_value
         self.d3 = self.get_parameter('rover_dimensions.d3').get_parameter_value().double_value
-        self.d4 = self.get_parameter('rover_dimensions.d4').get_parameter_value().double_value
+        #self.d4 = self.get_parameter('rover_dimensions.d4').get_parameter_value().double_value
 
         self.min_radius = 0.45  # [m]
         self.max_radius = 6.4  # [m]
@@ -195,10 +195,10 @@ class Rover(Node):
         elif abs(current_radius) >= self.max_radius:  # Very large turning radius, all wheels same speed、まっすぐ走ってるときかな
             angular_vel = speed / self.wheel_radius
             cmd_msg.left_front_vel = angular_vel
-            cmd_msg.left_middle_vel = angular_vel
+            #cmd_msg.left_middle_vel = angular_vel
             cmd_msg.left_back_vel = angular_vel
             cmd_msg.right_back_vel = -angular_vel#全部前進する方向にするために、モーターの向き的にマイナスになる
-            cmd_msg.right_middle_vel = -angular_vel
+            #cmd_msg.right_middle_vel = -angular_vel
             cmd_msg.right_front_vel = -angular_vel
 
             return cmd_msg
@@ -211,32 +211,32 @@ class Rover(Node):
             angular_velocity_center = float(speed) / radius
             # calculate desired velocities of all centers of wheels. Corner wheels on the same side
             # move with the same velocity. v = r * omega again
-            vel_middle_closest = (radius - self.d4) * angular_velocity_center
+            #vel_middle_closest = (radius - self.d4) * angular_velocity_center
             vel_corner_closest = math.hypot(radius - self.d1, self.d3) * angular_velocity_center
             vel_corner_farthest = math.hypot(radius + self.d1, self.d3) * angular_velocity_center
-            vel_middle_farthest = (radius + self.d4) * angular_velocity_center
+            #vel_middle_farthest = (radius + self.d4) * angular_velocity_center
 
             # now from these desired velocities, calculate the desired angular velocity of each wheel
             # v = r * omega again
-            ang_vel_middle_closest = vel_middle_closest / self.wheel_radius
+            #ang_vel_middle_closest = vel_middle_closest / self.wheel_radius
             ang_vel_corner_closest = vel_corner_closest / self.wheel_radius
             ang_vel_corner_farthest = vel_corner_farthest / self.wheel_radius
-            ang_vel_middle_farthest = vel_middle_farthest / self.wheel_radius
+            #ang_vel_middle_farthest = vel_middle_farthest / self.wheel_radius
 
             if current_radius > 0:  # turning left
                 cmd_msg.left_front_vel = ang_vel_corner_closest
                 cmd_msg.left_back_vel = ang_vel_corner_closest
-                cmd_msg.left_middle_vel = ang_vel_middle_closest
+                #cmd_msg.left_middle_vel = ang_vel_middle_closest
                 cmd_msg.right_back_vel = -ang_vel_corner_farthest
                 cmd_msg.right_front_vel = -ang_vel_corner_farthest
-                cmd_msg.right_middle_vel = -ang_vel_middle_farthest
+                #cmd_msg.right_middle_vel = -ang_vel_middle_farthest
             else:  # turning right
                 cmd_msg.left_front_vel = ang_vel_corner_farthest
                 cmd_msg.left_back_vel = ang_vel_corner_farthest
-                cmd_msg.left_middle_vel = ang_vel_middle_farthest
+                #cmd_msg.left_middle_vel = ang_vel_middle_farthest
                 cmd_msg.right_back_vel = -ang_vel_corner_closest
                 cmd_msg.right_front_vel = -ang_vel_corner_closest
-                cmd_msg.right_middle_vel = -ang_vel_middle_closest
+                #cmd_msg.right_middle_vel = -ang_vel_middle_closest
 
             return cmd_msg
 
@@ -282,7 +282,7 @@ class Rover(Node):
         corner_cmd = CommandCorner()
         corner_cmd.left_front_pos = math.atan(self.d3/self.d1)
         corner_cmd.left_back_pos = -corner_cmd.left_front_pos
-        corner_cmd.right_back_pos = math.atan(self.d2/self.d1)
+        corner_cmd.right_back_pos = math.atan(self.d3/self.d1)
         corner_cmd.right_front_pos = -corner_cmd.right_back_pos
 
         drive_cmd = CommandDrive()
@@ -291,12 +291,12 @@ class Rover(Node):
         front_wheel_vel = math.hypot(self.d1, self.d3) * angular_vel / self.wheel_radius
         drive_cmd.left_front_vel = front_wheel_vel
         drive_cmd.right_front_vel = front_wheel_vel
-        back_wheel_vel = math.hypot(self.d1, self.d2) * angular_vel / self.wheel_radius
+        back_wheel_vel = math.hypot(self.d1, self.d3) * angular_vel / self.wheel_radius
         drive_cmd.left_back_vel = back_wheel_vel
         drive_cmd.right_back_vel = back_wheel_vel
-        middle_wheel_vel = self.d4 * angular_vel / self.wheel_radius
-        drive_cmd.left_middle_vel = middle_wheel_vel
-        drive_cmd.right_middle_vel = middle_wheel_vel
+        #middle_wheel_vel = self.d4 * angular_vel / self.wheel_radius
+        # drive_cmd.left_middle_vel = middle_wheel_vel
+        # drive_cmd.right_middle_vel = middle_wheel_vel
 
         return corner_cmd, drive_cmd 
 
@@ -353,15 +353,76 @@ class Rover(Node):
             return float("Inf")
 
         return radius
-
-    def forward_kinematics(self):#エンコーダとかサーボの回転量から実際のローバーの動きを順運動学するメソッド、４輪版に変更する
+    
+    def forward_kinematics(self):
         """
         Calculate current twist of the rover given current drive and corner motor velocities
         Also approximate current turning radius.
-
-        Note that forward kinematics means solving an overconstrained system since the corner 
-        motors may not be aligned perfectly and drive velocities might fight each other
         """
+        # --- 1. 旋回半径の計算（元のOSRコードを完全継承・無傷） ---
+        theta_fl = -self.curr_positions['corner_left_front']
+        theta_fr = -self.curr_positions['corner_right_front']
+        theta_bl = -self.curr_positions['corner_left_back']
+        theta_br = -self.curr_positions['corner_right_back']
+        
+        if theta_fl + theta_fr + theta_bl + theta_br > 0:  # turning left
+            r_front_closest = self.d1 + self.angle_to_turning_radius(theta_fl)
+            r_front_farthest = -self.d1 + self.angle_to_turning_radius(theta_fr)
+            r_back_closest = -self.d1 - self.angle_to_turning_radius(theta_bl)
+            r_back_farthest = self.d1 - self.angle_to_turning_radius(theta_br)
+        else:  # turning right
+            r_front_farthest = self.d1 + self.angle_to_turning_radius(theta_fl)
+            r_front_closest = -self.d1 + self.angle_to_turning_radius(theta_fr)
+            r_back_farthest = -self.d1 - self.angle_to_turning_radius(theta_bl)
+            r_back_closest = self.d1 - self.angle_to_turning_radius(theta_br)
+            
+        approx_turning_radius = sum(sorted([r_front_farthest, r_front_closest, r_back_farthest, r_back_closest])[1:3])/2.0
+
+        if math.isnan(approx_turning_radius):
+            approx_turning_radius = self.max_radius
+        self.get_logger().debug("Current approximate turning radius: {}".format(round(approx_turning_radius, 2)), throttle_duration_sec=1)
+        self.curr_turning_radius = approx_turning_radius
+
+        # --- 2. 直進速度の計算（中間車輪を削除し、4輪の速度成分の平均を計算） ---
+        vel_fl = self.curr_velocities['drive_left_front']
+        vel_fr = self.curr_velocities['drive_right_front']
+        vel_bl = self.curr_velocities['drive_left_back']
+        vel_br = self.curr_velocities['drive_right_back']
+
+        v_fl_x = vel_fl * math.cos(theta_fl)
+        v_fr_x = vel_fr * math.cos(theta_fr)
+        v_bl_x = vel_bl * math.cos(theta_bl)
+        v_br_x = vel_br * math.cos(theta_br)
+
+        drive_angular_velocity = (v_fl_x + v_fr_x + v_bl_x + v_br_x) / 4.0
+        self.curr_twist.twist.linear.x = drive_angular_velocity * self.wheel_radius
+
+        # --- 3. 旋回速度の計算（元の計算方式を維持し、超信地旋回時の距離のみ4輪用に修正） ---
+        try:
+            self.curr_twist.twist.angular.z = self.curr_twist.twist.linear.x / self.curr_turning_radius
+        except ZeroDivisionError:  # 超信地旋回（その場回転）の場合
+            self.curr_twist.twist.linear.x = 0.0
+            
+            # 機体中心からタイヤまでの直線距離（斜辺）を計算
+            dist_to_center = math.hypot(self.d1, self.d3)
+            
+            # 左右の速度の平均差分から角速度を求める
+            left_vel_avg = (vel_fl + vel_bl) / 2.0
+            right_vel_avg = (vel_fr + vel_br) / 2.0
+            
+            drive_angular_velocity = (left_vel_avg - right_vel_avg) / 2.0
+            self.curr_twist.twist.angular.z = drive_angular_velocity * self.wheel_radius / dist_to_center
+            self.get_logger().debug(f"Turn-in-place detected. Angular velocity: {self.curr_twist.twist.angular.z}", throttle_duration_sec=1)
+
+"""
+    def forward_kinematics(self):#エンコーダとかサーボの回転量から実際のローバーの動きを順運動学するメソッド、４輪版に変更する
+        
+        #Calculate current twist of the rover given current drive and corner motor velocities
+        #Also approximate current turning radius.
+
+        #Note that forward kinematics means solving an overconstrained system since the corner 
+        #motors may not be aligned perfectly and drive velocities might fight each other
+        
         # calculate current turning radius according to each corner wheel's angle
         # corner motor angles should be flipped since different coordinate axes in this node (positive z up)
         theta_fl = -self.curr_positions['corner_left_front']
@@ -401,52 +462,6 @@ class Rover(Node):
             drive_angular_velocity = (self.curr_velocities['drive_left_middle'] - self.curr_velocities['drive_right_middle']) / 2.0
             self.curr_twist.twist.angular.z = drive_angular_velocity * self.wheel_radius / self.d4  # Use width from middle wheel to center of rover
             self.get_logger().debug(f"Turn-in-place detected. Angular velocity: {self.curr_twist.twist.angular.z}", throttle_duration_sec=1)
-
-"""
-def forward_kinematics(self):#４輪バージョン
-        
-        #Calculate current twist of the 4-wheel independent drive and steering rover.
-        
-        # 1. 4つのサーボの現在の実際の角度を取得（向きの反転を考慮）
-        theta_fl = -self.curr_positions.get('corner_left_front', 0.0)
-        theta_fr = -self.curr_positions.get('corner_right_front', 0.0)
-        theta_bl = -self.curr_positions.get('corner_left_back', 0.0)
-        theta_br = -self.curr_positions.get('corner_right_back', 0.0)
-
-        # 2. 4つの駆動輪の現在の実際の回転速度（rad/s）を取得
-        v_fl = self.curr_velocities.get('drive_left_front', 0.0) * self.wheel_radius
-        v_fr = self.curr_velocities.get('drive_right_front', 0.0) * self.wheel_radius
-        v_bl = self.curr_velocities.get('drive_left_back', 0.0) * self.wheel_radius
-        v_br = self.curr_velocities.get('drive_right_back', 0.0) * self.wheel_radius
-
-        # 3. 各車輪の「進行方向（X方向）」の実績速度を三角関数で割り出す
-        # タイヤの速度ベクトルをロボットの正面方向（cos）に分解します
-        v_x_fl = v_fl * math.cos(theta_fl)
-        v_x_fr = v_fr * math.cos(theta_fr)
-        v_x_bl = v_bl * math.cos(theta_bl)
-        v_x_br = v_br * math.cos(theta_br)
-
-        # 4. ローバー全体の現在の直進速度（linear.x）は、4輪の正面速度の平均値
-        self.curr_twist.twist.linear.x = (v_x_fl + v_x_fr + v_x_bl + v_x_br) / 4.0
-
-        # 5. ローバー全体の現在の旋回速度（angular.z）を計算する
-        # トレッド幅の半分をd1（左右間隔の半分）、ホイールベースの半分をd3（前後間隔の半分）と仮定
-        # 各タイヤの速度差と向きから、中心まわりの回転（角速度）を逆算します
-        try:
-            # 左右の速度差による回転成分を、機体の寸法パラメータ（self.d1, self.d3）で割る
-            # 前輪側の回転推測
-            omega_front = (v_fl * math.sin(theta_fl) - v_fr * math.sin(theta_fr)) / (2.0 * self.d1)
-            # 後輪側の回転推測
-            omega_back = (v_bl * math.sin(theta_bl) - v_br * math.sin(theta_br)) / (2.0 * self.d1)
-            
-            # 左右の駆動速度差による標準的な差動回転成分（直進成分からの回転）
-            omega_drive = ((v_x_fr - v_x_fl) + (v_x_br - v_x_bl)) / (4.0 * self.d1)
-            
-            # これらを総合的に平均して、もっともらしい全体の旋回角速度（rad/s）を決定
-            self.curr_twist.twist.angular.z = (omega_front + omega_back + omega_drive) / 3.0
-
-        except ZeroDivisionError:
-            self.curr_twist.twist.angular.z = 0.0
 """
 
 def main(args=None):

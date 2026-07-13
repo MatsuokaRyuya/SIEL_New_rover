@@ -11,7 +11,7 @@ from roboclaw import Roboclaw
 BAUD_RATE = 115200
 
 def test_connection(address):
-    roboclaw0 = Roboclaw("/dev/serial0", BAUD_RATE)
+    roboclaw0 = Roboclaw("/dev/serial0", BAUD_RATE)#roboclawのyamlに合わせる
     roboclaw1 = Roboclaw("/dev/serial1", BAUD_RATE)
     connected0 = roboclaw0.Open() == 1
     connected1 = roboclaw1.Open() == 1

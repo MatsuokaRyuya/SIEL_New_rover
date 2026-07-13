@@ -22,7 +22,7 @@ class RoboclawWrapper(Node):
 
         # initialize attributes
         self.rc = None
-        self.err = [None] * 3
+        self.err = []
         self.address = []
         self.current_enc_vals = None
         self.drive_cmd_buffer = None
@@ -44,10 +44,10 @@ class RoboclawWrapper(Node):
                 ('roboclaw_mapping.drive_left_front.channel', Parameter.Type.STRING),
                 ('roboclaw_mapping.drive_left_front.ticks_per_rev', Parameter.Type.INTEGER),
                 ('roboclaw_mapping.drive_left_front.gear_ratio', Parameter.Type.DOUBLE),
-                ('roboclaw_mapping.drive_left_middle.address', Parameter.Type.INTEGER),
-                ('roboclaw_mapping.drive_left_middle.channel', Parameter.Type.STRING),
-                ('roboclaw_mapping.drive_left_middle.ticks_per_rev', Parameter.Type.INTEGER),
-                ('roboclaw_mapping.drive_left_middle.gear_ratio', Parameter.Type.DOUBLE),
+                #('roboclaw_mapping.drive_left_middle.address', Parameter.Type.INTEGER),
+                #('roboclaw_mapping.drive_left_middle.channel', Parameter.Type.STRING),
+                #('roboclaw_mapping.drive_left_middle.ticks_per_rev', Parameter.Type.INTEGER),
+                #('roboclaw_mapping.drive_left_middle.gear_ratio', Parameter.Type.DOUBLE),
                 ('roboclaw_mapping.drive_left_back.address', Parameter.Type.INTEGER),
                 ('roboclaw_mapping.drive_left_back.channel', Parameter.Type.STRING),
                 ('roboclaw_mapping.drive_left_back.ticks_per_rev', Parameter.Type.INTEGER),
@@ -56,10 +56,10 @@ class RoboclawWrapper(Node):
                 ('roboclaw_mapping.drive_right_front.channel', Parameter.Type.STRING),
                 ('roboclaw_mapping.drive_right_front.ticks_per_rev', Parameter.Type.INTEGER),
                 ('roboclaw_mapping.drive_right_front.gear_ratio', Parameter.Type.DOUBLE),
-                ('roboclaw_mapping.drive_right_middle.address', Parameter.Type.INTEGER),
-                ('roboclaw_mapping.drive_right_middle.channel', Parameter.Type.STRING),
-                ('roboclaw_mapping.drive_right_middle.ticks_per_rev', Parameter.Type.INTEGER),
-                ('roboclaw_mapping.drive_right_middle.gear_ratio', Parameter.Type.DOUBLE),
+                #('roboclaw_mapping.drive_right_middle.address', Parameter.Type.INTEGER),
+                #('roboclaw_mapping.drive_right_middle.channel', Parameter.Type.STRING),
+                #('roboclaw_mapping.drive_right_middle.ticks_per_rev', Parameter.Type.INTEGER),
+                #('roboclaw_mapping.drive_right_middle.gear_ratio', Parameter.Type.DOUBLE),
                 ('roboclaw_mapping.drive_right_back.address', Parameter.Type.INTEGER),
                 ('roboclaw_mapping.drive_right_back.channel', Parameter.Type.STRING),
                 ('roboclaw_mapping.drive_right_back.ticks_per_rev', Parameter.Type.INTEGER),
@@ -69,28 +69,28 @@ class RoboclawWrapper(Node):
 
         self.roboclaw_mapping = defaultdict(dict)
         self.roboclaw_mapping["drive_left_front"]["address"] = self.get_parameter('roboclaw_mapping.drive_left_front.address').get_parameter_value().integer_value
-        self.roboclaw_mapping["drive_left_middle"]["address"] = self.get_parameter('roboclaw_mapping.drive_left_middle.address').get_parameter_value().integer_value
+        #self.roboclaw_mapping["drive_left_middle"]["address"] = self.get_parameter('roboclaw_mapping.drive_left_middle.address').get_parameter_value().integer_value
         self.roboclaw_mapping["drive_left_back"]["address"] = self.get_parameter('roboclaw_mapping.drive_left_back.address').get_parameter_value().integer_value
         self.roboclaw_mapping["drive_right_front"]["address"] = self.get_parameter('roboclaw_mapping.drive_right_front.address').get_parameter_value().integer_value
-        self.roboclaw_mapping["drive_right_middle"]["address"] = self.get_parameter('roboclaw_mapping.drive_right_middle.address').get_parameter_value().integer_value
+        #self.roboclaw_mapping["drive_right_middle"]["address"] = self.get_parameter('roboclaw_mapping.drive_right_middle.address').get_parameter_value().integer_value
         self.roboclaw_mapping["drive_right_back"]["address"] = self.get_parameter('roboclaw_mapping.drive_right_back.address').get_parameter_value().integer_value
         self.roboclaw_mapping["drive_left_front"]["channel"] = self.get_parameter('roboclaw_mapping.drive_left_front.channel').get_parameter_value().string_value
-        self.roboclaw_mapping["drive_left_middle"]["channel"] = self.get_parameter('roboclaw_mapping.drive_left_middle.channel').get_parameter_value().string_value
+        #self.roboclaw_mapping["drive_left_middle"]["channel"] = self.get_parameter('roboclaw_mapping.drive_left_middle.channel').get_parameter_value().string_value
         self.roboclaw_mapping["drive_left_back"]["channel"] = self.get_parameter('roboclaw_mapping.drive_left_back.channel').get_parameter_value().string_value
         self.roboclaw_mapping["drive_right_front"]["channel"] = self.get_parameter('roboclaw_mapping.drive_right_front.channel').get_parameter_value().string_value
-        self.roboclaw_mapping["drive_right_middle"]["channel"] = self.get_parameter('roboclaw_mapping.drive_right_middle.channel').get_parameter_value().string_value
+        #self.roboclaw_mapping["drive_right_middle"]["channel"] = self.get_parameter('roboclaw_mapping.drive_right_middle.channel').get_parameter_value().string_value
         self.roboclaw_mapping["drive_right_back"]["channel"] = self.get_parameter('roboclaw_mapping.drive_right_back.channel').get_parameter_value().string_value
         self.roboclaw_mapping["drive_left_front"]["ticks_per_rev"] = self.get_parameter('roboclaw_mapping.drive_left_front.ticks_per_rev').get_parameter_value().integer_value
-        self.roboclaw_mapping["drive_left_middle"]["ticks_per_rev"] = self.get_parameter('roboclaw_mapping.drive_left_middle.ticks_per_rev').get_parameter_value().integer_value
+        #self.roboclaw_mapping["drive_left_middle"]["ticks_per_rev"] = self.get_parameter('roboclaw_mapping.drive_left_middle.ticks_per_rev').get_parameter_value().integer_value
         self.roboclaw_mapping["drive_left_back"]["ticks_per_rev"] = self.get_parameter('roboclaw_mapping.drive_left_back.ticks_per_rev').get_parameter_value().integer_value
         self.roboclaw_mapping["drive_right_front"]["ticks_per_rev"] = self.get_parameter('roboclaw_mapping.drive_right_front.ticks_per_rev').get_parameter_value().integer_value
-        self.roboclaw_mapping["drive_right_middle"]["ticks_per_rev"] = self.get_parameter('roboclaw_mapping.drive_right_middle.ticks_per_rev').get_parameter_value().integer_value
+        #self.roboclaw_mapping["drive_right_middle"]["ticks_per_rev"] = self.get_parameter('roboclaw_mapping.drive_right_middle.ticks_per_rev').get_parameter_value().integer_value
         self.roboclaw_mapping["drive_right_back"]["ticks_per_rev"] = self.get_parameter('roboclaw_mapping.drive_right_back.ticks_per_rev').get_parameter_value().integer_value
         self.roboclaw_mapping["drive_left_front"]["gear_ratio"] = self.get_parameter('roboclaw_mapping.drive_left_front.gear_ratio').get_parameter_value().double_value
-        self.roboclaw_mapping["drive_left_middle"]["gear_ratio"] = self.get_parameter('roboclaw_mapping.drive_left_middle.gear_ratio').get_parameter_value().double_value
+        #self.roboclaw_mapping["drive_left_middle"]["gear_ratio"] = self.get_parameter('roboclaw_mapping.drive_left_middle.gear_ratio').get_parameter_value().double_value
         self.roboclaw_mapping["drive_left_back"]["gear_ratio"] = self.get_parameter('roboclaw_mapping.drive_left_back.gear_ratio').get_parameter_value().double_value
         self.roboclaw_mapping["drive_right_front"]["gear_ratio"] = self.get_parameter('roboclaw_mapping.drive_right_front.gear_ratio').get_parameter_value().double_value
-        self.roboclaw_mapping["drive_right_middle"]["gear_ratio"] = self.get_parameter('roboclaw_mapping.drive_right_middle.gear_ratio').get_parameter_value().double_value
+        #self.roboclaw_mapping["drive_right_middle"]["gear_ratio"] = self.get_parameter('roboclaw_mapping.drive_right_middle.gear_ratio').get_parameter_value().double_value
         self.roboclaw_mapping["drive_right_back"]["gear_ratio"] = self.get_parameter('roboclaw_mapping.drive_right_back.gear_ratio').get_parameter_value().double_value
 
         self.encoder_limits = {}
@@ -267,9 +267,9 @@ class RoboclawWrapper(Node):
         vel_cmd = self.velocity2qpps(cmd.left_front_vel, props["ticks_per_rev"], props["gear_ratio"])
         self.send_velocity_cmd(props["address"], props["channel"], vel_cmd)
 
-        props = self.roboclaw_mapping["drive_left_middle"]
-        vel_cmd = self.velocity2qpps(cmd.left_middle_vel, props["ticks_per_rev"], props["gear_ratio"])
-        self.send_velocity_cmd(props["address"], props["channel"], vel_cmd)
+        # props = self.roboclaw_mapping["drive_left_middle"]
+        # vel_cmd = self.velocity2qpps(cmd.left_middle_vel, props["ticks_per_rev"], props["gear_ratio"])
+        # self.send_velocity_cmd(props["address"], props["channel"], vel_cmd)
 
         props = self.roboclaw_mapping["drive_left_back"]
         vel_cmd = self.velocity2qpps(cmd.left_back_vel, props["ticks_per_rev"], props["gear_ratio"])
@@ -279,9 +279,9 @@ class RoboclawWrapper(Node):
         vel_cmd = self.velocity2qpps(cmd.right_back_vel, props["ticks_per_rev"], props["gear_ratio"])
         self.send_velocity_cmd(props["address"], props["channel"], vel_cmd)
 
-        props = self.roboclaw_mapping["drive_right_middle"]
-        vel_cmd = self.velocity2qpps(cmd.right_middle_vel, props["ticks_per_rev"], props["gear_ratio"])
-        self.send_velocity_cmd(props["address"], props["channel"], vel_cmd)
+        # props = self.roboclaw_mapping["drive_right_middle"]
+        # vel_cmd = self.velocity2qpps(cmd.right_middle_vel, props["ticks_per_rev"], props["gear_ratio"])
+        # self.send_velocity_cmd(props["address"], props["channel"], vel_cmd)
 
         props = self.roboclaw_mapping["drive_right_front"]
         vel_cmd = self.velocity2qpps(cmd.right_front_vel, props["ticks_per_rev"], props["gear_ratio"])
@@ -425,16 +425,16 @@ class RoboclawWrapper(Node):
         return self.rc.ReadMainBatteryVoltage(self.address[0])[1] / 10.0
 
     def read_temperatures(self):
-        temp = [None] * 3
-        for i in range(3):
+        temp = [None] * len(self.address)
+        for i in range(len(self.address)):
             # reported by roboclaw in 10ths of a Celsius
             temp[i] = self.rc.ReadTemp(self.address[i])[1] / 10.0
         
         return temp
 
     def read_currents(self):
-        currents = [None] * 6
-        for i in range(3):
+        currents = [None] * (len(self.address) * 2)
+        for i in range(len(self.address)):
             currs = self.rc.ReadCurrents(self.address[i])
             # reported by roboclaw in 10ths of an Ampere
             currents[2*i] = currs[1] / 100.0
@@ -444,13 +444,13 @@ class RoboclawWrapper(Node):
 
     def stop_motors(self):
         """Stops all motors on Rover"""
-        for i in range(3):
-            self.rc.DutyM1(self.address[i], 0)
-            self.rc.DutyM2(self.address[i], 0)
+        for address in self.address:
+            self.rc.DutyM1(address, 0)
+            self.rc.DutyM2(address, 0)
 
     def read_errors(self):
         """Checks error status of each motor controller, returns 0 if no errors reported"""
-        err = ['0'] * 3
+        err = ['0'] * len(self.address)
         for i in range(len(self.address)):
             err_int = self.rc.ReadError(self.address[i])[1]
 
