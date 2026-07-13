@@ -1,1 +1,0 @@
-/home/ryuya/rover_workspace/src/osr_control/setup.py
